@@ -3,8 +3,7 @@ sys.stdin = open("input.txt", "r")
 input = sys.stdin.readline
 from collections import deque
 
-def floyd():
-    level_list = [[] for _ in range(n+1)]
+def topology():
     dq = deque()
     
     for i in range(1, n+1):
@@ -39,4 +38,4 @@ if __name__ == "__main__":
             
         w = int(input())
         
-        floyd()
+        topology()
