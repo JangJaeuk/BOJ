@@ -18,5 +18,3 @@ if __name__ == "__main__":
         heapq.heappush(pq, schedule_list[i][1])
 
     print(len(pq))
-        
-        
