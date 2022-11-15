@@ -15,10 +15,14 @@ if __name__ == "__main__":
     while cnt < N:
         t = hq.heappop(heap)
         if t != res:
+            print(cnt + 1, '번째 숫자', str(t)+',', end=' ')
             res = t
             cnt += 1
             for ai in a:
                 hq.heappush(heap, ai * t)
+            print(heap)
+        else:
+            print(heap)
 
     print(res)
 '''
@@ -35,10 +39,13 @@ if __name__ == "__main__":
 
     res = 0
 
-    for _ in range(N):
+    for i in range(N):
         res = hq.heappop(heap)
+        print(i + 1, '번째 숫자', str(res)+',', end=' ')
         for ai in a:
             hq.heappush(heap, ai * res)
             if res % ai == 0:
                 break
+        print(heap)
+    print()
     print(res)
