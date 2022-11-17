@@ -26,3 +26,5 @@ if __name__ == "__main__":
     roadmap = [list(map(int, input().split())) for _ in range(N)]
     dp = [[-1] * M for _ in range(N)]
     print(dfs(0, 0))
+    for road in dp:
+        print(road)
